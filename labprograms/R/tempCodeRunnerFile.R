@@ -1,0 +1,1 @@
+ choice <- as.integer(readline(prompt = "Enter among the  choice

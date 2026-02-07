@@ -1,0 +1,78 @@
+Tags used for the html and their features:-
+
+NO__| TAGS________________________|  DESCRIPTION___________________________________________________________________|
+    |                             |              
+
+----HEADER TAGS--------                        
+001.|  <!DOCTYPE html>            |  Defines the document is a HTML% document
+002.|  <HTML>                     |  Root element for the entire document and webpage 
+003.|  <HTML lang="en">           |  Selected language mode English
+004.|  <HEAD>                     |  head file structure adn links 
+005.|  <meta charset="UTF-8">     |  Able to use emojis and characters to display 
+006.|  <TITLE>                    |  Title of the website 
+033.|  <link rel="" href="?.css"> |  Connect CSS file 
+034.|  <SCRIPT src="?.js">        |  Connect JavaScript 
+    |                             |
+
+
+----BODY TAGS----------
+007.|  <BODY>                     |  Body of the potion that will be visible to the end user
+008.|  <HEADER>                   |  Top bar of the website 
+009.|  <NAV>                      |  Contains navigation links  
+010.|  <A href="#location">       |  Anchor tag used to link a section id 
+011.|  <SECTION id="location">    |  Divides a page into parts and link JavaScript id link 
+048.|  <CENTER>                   |  Aligns at the center
+014.|  <BUTTON id="location">     |  Creates a clickable BUTTON
+015.|  <UL>                       |  Unordered bullet list point 
+028.|  <OL>                       |  Ordered list 
+016.|  <LI>                       |  List item 
+051.|  <DL>                       |  Defination list
+052.|  <DT>                       |  Declaration tag
+053.|  <DD>                       |  Declaration data
+022.|  <IMG src="image.?" alt=""> |  Used to load an image, alt is used for if any errors have occured to load 
+023.|  <DIV>                      |  Container or outline box 
+024.|  <SPAN style="color: ">     |  Inline container text styling
+027.|<input type="" placeholder="">  User input field 
+035.|  <HR>                       |  Horizontal line 
+054.|  <BLOCKQUOTE>               |  Entire segment inot quotes
+055.|  <PRE>                      |  Block that prints itself without any changes 
+025.|  <FOOTER>                   |  Footer for bottom area 
+    |                             | 
+
+
+----TEXT TAGS-----------
+017.|  <BR>                       |  Line break 
+018.|  <B>                        |  Bolden text 
+019.|  <STRONG>                   |  Same as bold tag 
+020.|  <I>                        |  Italic text 
+021.|  <EM>                       |  Emphasized text 
+042.|  <MARK>                     |  Marked text  
+043.|  <SMALL>                    |  Smaller text size 
+044.|  <DEL>                      |  Deleted text or crossed text 
+045.|  <INS>                      |  Inserted text 
+046.|  <SUB>                      |  Subscripted text 
+047.|  <SUP>                      |  Superscripted text 
+012.|  <H1> to <H6>               |  Headings biggest from low to high 
+013.|  <P>                        |  Paragraph tag 
+014.|  <Q>                        |  Quotation tag with enclosed quotes 
+056.|  <CITE>                     |  Citation text
+    |                             | 
+
+
+----TABLE TAGS---------    
+029.|  <TABLE border="size">      |  Creates a table 
+030.|  <TR>                       |  Table row 
+031.|  <TH>                       |  Table header 
+032.|  <TD>                       |  Table data 
+036.|  <CAPTION>                  |  Gives a table caption 
+037.|  <COLGROUP>                 |  Specifies one or more columns of the table 
+038.|  <COL>                      |  Specifies column properties of each row
+039.|  <THEAD>                    |  Header for the table 
+040.|  <TFOOT>                    |  Footer for the table 
+041.|  <TBODY>                    |  Table body 
+    |                             | 
+
+
+----FORM TAGS---------
+026.|  <FORM>                     |  Wraps a form 
+    |                             |

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Timetable</title>
+        <style>
+            *{
+                font-family: Arial, Helvetica, sans-serif ;
+                margin: 0 ;
+                padding: 0 ;
+            }
+
+            .border{
+                display: flex ;
+                justify-content: center ;
+                align-items: center ;
+                height: 100vh ;
+                width: 100vw ;
+            }
+
+            #table{
+                border: 2px solid black ;
+                justify-content: center ;
+                width: 100% ;
+            }
+
+            #table tr, td, th{
+                border: 1px solid black ;
+                padding: 20px 20px ;
+                text-align: center ;
+                vertical-align: middle ;
+                background-color: white ;
+                height: 50px ;
+                width: 100px ;
+            }
+
+            .PY,
+            .PYlab{
+                background-color: lightblue ;
+                color: black ;
+            }
+
+            .PHP,
+            .PHPlab{
+                background-color: lightgreen ;
+                color: black ;
+            }
+
+            .se{
+                background-color: lightcoral ;
+                color: black ;
+            }
+
+            .cona{
+                background-color: lightyellow ;
+                color: black ;
+            }
+
+            .fl{
+                background-color: rgb(33, 219, 157) ;
+                color: black ;
+            }
+
+            .fc{
+                background-color: rgb(11, 240, 60) ;
+                color: black ;
+            }
+
+            .swayam{
+                background-color: rgb(240, 179, 11) ;
+                color: black ;
+            }
+
+            .lib{
+                background-color: rgb(179, 11, 240) ;
+                color: white ;
+            }
+
+            .ve{
+                background-color: rgb(235, 24, 34) ;
+                color: white ;
+            }
+
+            .ECC{
+                background-color: rgb(14, 48, 241) ;
+                color: white ;
+            }
+        </style>
+    </head>
+
+
+
+    <body>
+        <div class="border">
+        <table class="table">
+            <tr>
+                <th>Days</th>
+                <td>9:00</td>
+                <td>9:50</td>
+                <td>10:50</td>
+                <td>11:45</td>
+                <td>1:30</td>
+                <td>2:25</td>
+                <td>3:15</td>
+            </tr>
+
+            <tr>
+                <th>Monday</th>
+                <td class="PY">Python</td>
+                <td class="cona">CONA</td>
+                <td class="fl">Fl</td>
+                <td class="lib">Library</td>
+                <td class="PYlab" colspan="2">Python Lab</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th>Tuesday</th>
+                <td class="PHP">PHP</td>
+                <td class="PY">Python</td>
+                <td class="se">SE</td>
+                <td class="swayam">Swayam</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th>Wednesday</th>
+                <td class="PHPlab" colspan="2">PHP lab</td>
+                <td class="se">SE</td>
+                <td class="cona">CONA</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th>Thursday</th>
+                <td class="cona">CONA</td>
+                <td class="PHP">PHP</td>
+                <td class="fl">FL</td>
+                <td class="fc">FC</td>
+                <td class="PYlab" colspan="2">Python lab</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th>Friday</th>
+                <td class="lib">Library</td>
+                <td class="fc">FC</td>
+                <td class="PY">Python</td>
+                <td class="PHP">PHP</td>
+                <td class="se">SE</td>
+                <td class="ECC" colspan="2">EC/CC</td>
+            </tr>
+
+            <tr>
+                <th>Saturday</th>
+                <td class="fl">FL</td>
+                <td class="ve">VE</td>
+                <td class="PHPlab" colspan="2">PHP lab</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        </div>
+    </body>
+</html>

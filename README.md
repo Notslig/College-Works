@@ -1,2 +1,2 @@
 # College-Works
-This repository is made for dumping all my college stuff in this repository 
+Most of College stuff unloaded in this repository for public use among students 

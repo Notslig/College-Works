@@ -1,0 +1,816 @@
+/*HOMEPAGE SETTINGS */
+
+
+/*Main body styling changes */
+*{
+    margin: 0 ;
+    padding: 0 ;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: sans-serif ;
+}
+
+body{
+    overflow-x: hidden ;
+    justify-content: center;
+    background-color: black ;
+}
+
+hr{
+    border: 1px solid black ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INDEX SETTINGS*/
+/* Homepage full screen settings */
+.homepage-header{
+    min-height: 100vh ;
+    width: 100% ;
+    background-color: rgb(0, 0, 0);
+    background-image: url("images/utility/bggif.gif") ;
+    background-position: center ;
+    background-size: 100% 100% ;
+    position: relative ;
+    justify-content: center;
+    
+    
+}
+
+
+/* Navigation bar to move*/
+nav{
+    display: flex ;
+    padding: 0px 10px ;
+    justify-content: space-between ;
+    align-items: center;
+    background-color: rgb(44, 44, 44) ;
+    border: 1px solid black;
+    position: relative;
+}
+/* Logo image */
+nav img{
+    width: 200px ;
+    
+}
+/* navigation bar position*/
+.nav-links{
+    flex: 1 ;
+    text-align: center ;
+    position: absolute ;
+    top: 20px ;
+    right: 200px ;
+    z-index: 2 ;
+}
+.nav-links ul li{
+    list-style: none ;
+    display: inline-block ;
+    padding: 12px 20px ;
+    position: relative ;
+}
+.nav-links ul li a{
+    color: rgb(43, 250, 36) ;
+    text-decoration: none ;
+    font-size: 1rem ;
+}
+
+/* Hovering effect  */
+.nav-links ul li::after{
+    content: ' ' ;
+    width: 0% ;
+    height: 2px ;
+    background: rgb(43, 250, 36) ;
+    display: block ;
+    margin: auto ;
+    transition: 0.5s ;
+}
+.nav-links ul li:hover::after{
+    width: 100% ;
+}
+
+
+/* Introduction to the webpage division box  */
+.main-header{
+    width: 90% ;
+    color: white ;
+    position: absolute ;
+    top: 50% ;
+    left: 50% ;
+    transform: translate(-50%,-50%) ;
+    text-align: center ;
+    font-size: large ;
+    font-weight: 200 ;
+    outline: black solid 2px;
+    opacity: 0.6 ;
+    background-color: rgb(41, 40, 40) ;
+    border-radius: 20px  ;
+}
+.main-header h1{
+    font-size: 3rem ;
+    margin-top: 10px ;
+    margin-bottom: 20px ; 
+    color:rgb(255, 255, 255) ;
+    opacity: 1 ;
+    justify-content: center ;
+}
+.main-header p{
+    color: rgb(241, 238, 238) ;
+    font-size: 1.2rem ;
+    margin-bottom: 40px ; 
+    opacity: 1 ;
+}
+.black-bold{
+    color: rgb(43, 250, 36) ;
+    font-weight: bold ;
+}
+.white-bold{
+    color: rgb(43, 250, 36) ;
+    font-weight: bold ;
+}
+
+
+/* Country selection section*/
+.country-hud{
+    padding-top: 100px;
+    background: rgb(0, 0, 0) ;
+    padding-bottom: 100px ;
+    opacity: 1 ;
+}
+/* Country hud */
+.country-selection {
+    justify-content: center ;
+    align-items: center ;
+    text-align: center ;
+    margin-bottom: 50px ;
+    margin-top: 50px ;
+}
+/* Fieldset coloring*/
+.country-border{
+    width: 80% ;
+    margin: auto ;
+    text-align: center ;
+    font-size: 2.5rem ;
+    margin-bottom: 40px ;
+    background-color:rgb(31, 30, 30) ;
+    border-radius: 10px ;
+    padding: 10px ;
+    border: 3px solid rgb(43, 250, 36) ;
+}
+.country-border legend{
+    font-size: 2rem ;
+    font-weight: bold ;
+    color: rgb(43, 250, 36) ;
+}
+/*each row settings*/
+.row1{
+    display: flex ;
+    flex-wrap: wrap;
+}
+.row2{
+    display: flex ;
+    flex-wrap: wrap;
+}
+.row3{
+    display: flex ;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* Each country hovering effects*/
+.country-pickUSA{/* country flags */
+    width: 400px ;
+    height: 200px ;
+    margin: 20px ;
+    background-color: rgb(24, 23, 23) ;
+    background-image: url("images/USA/USA.png") ;
+    background-size: 100% 100%;
+    border-radius: 10px ;
+    border: 2px solid rgb(43, 250, 36);
+    cursor:  pointer;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1) ;
+    transition: transform 0.3s ease-in-out;
+    display: block ;
+}
+.country-pickUSSR{
+    width: 400px ;
+    height: 200px ;
+    margin: 20px ;
+    background-color: rgb(24, 23, 23) ;
+    background-image: url("images/USSR/USSR.png") ;
+    background-size: 100% 100%;
+    border-radius: 10px ;
+    border: 2px solid rgb(43, 250, 36);
+    cursor: pointer ;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1) ;
+    transition: transform 0.3s ease-in-out;
+    display: block ;
+
+}
+.country-pickGER{
+    width: 400px ;
+    height: 200px ;
+    margin: 20px ;
+    background-color: rgb(24, 23, 23) ;
+    background-image: url("images/GER/germany.png") ;
+    background-size: 100% 100%;
+    border-radius: 10px ;
+    border: 2px solid rgb(43, 250, 36);
+    cursor: pointer;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1) ;
+    transition: transform 0.3s ease-in-out;
+    display: block ;
+}
+.country-pickFRA{
+    width: 400px ;
+    height: 200px ;
+    margin: 20px ;
+    background-color: rgb(24, 23, 23) ;
+    background-image: url("images/FR/France.png") ;
+    background-size: 100% 100%;
+    border-radius: 10px ;
+    border: 2px solid rgb(43, 250, 36);
+    cursor: pointer;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1) ;
+    transition: transform 0.3s ease-in-out;
+    display: block ;
+}
+.country-pickUK{
+    width: 400px ;
+    height: 200px ;
+    margin: 20px ;
+    background-color: rgb(24, 23, 23) ;
+    background-image: url("images/UK/UK.png") ;
+    background-size: 100% 100%;
+    border-radius: 10px ;
+    border: 2px solid rgb(43, 250, 36);
+    cursor: pointer;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1) ;
+    transition: transform 0.3s ease-in-out;
+    display: block ;
+}
+.country-pickJPN{
+    width: 400px ;
+    height: 200px ;
+    margin: 20px ;
+    background-color: rgb(24, 23, 23);
+    background-image: url("images/IJN/japan.png") ;
+    background-size: 100% 100%;
+    border-radius: 10px ;
+    border: 2px solid rgb(43, 250, 36);
+    cursor: pointer;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1) ;
+    transition: transform 0.3s ease-in-out;
+    display: block ;
+}
+.country-pickITY{
+    width: 400px ;
+    height: 200px ;
+    margin: 20px ;
+    background-color: rgb(24, 23, 23) ;
+    background-image: url("images/ITY/Italy.png") ;
+    background-size: 100% 100%;
+    border-radius: 10px ;
+    border: 2px solid rgb(43, 250, 36);
+    cursor: pointer;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1) ;
+    transition: transform 0.3s ease-in-out;
+    display: block ;
+}
+/* Hover effects*/
+.country-pickFRA:hover,
+.country-pickGER:hover,
+.country-pickITY:hover,
+.country-pickJPN:hover,
+.country-pickUK:hover,
+.country-pickUSA:hover,
+.country-pickUSSR:hover{
+    transform: scale(1.05) ;
+    transition: all 0.3s ease-in-out ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EACH COUNTRY PAGE SETTINGS*/
+/* Homepage navigation on other site */
+.country-header{
+    min-height: 100vh ;
+    width: 100% ;
+    position: relative ;
+    justify-content: center;
+}
+
+/* Each country static gif background*/
+.background-USA{
+    background-image: url("images/USA/background.gif") ;
+    background-size: 100% 100% ;
+    background-attachment: fixed ;
+    background-position: center ;
+    background-color: black ;
+}
+.background-USSR{
+    background-image: url("images/USSR/background.gif") ;
+    background-size: cover ;
+    background-attachment: fixed ;
+    background-position: center ;
+}
+.background-FR{
+    background-image: url("images/FR/background.gif") ;
+    background-size: cover ;
+    background-attachment: fixed ;
+    background-position: center ;
+}
+.background-GER{
+    background-image: url("images/GER/background.gif") ;
+    background-size: cover ;
+    background-attachment: fixed ;
+    background-position: center ;
+}
+.background-IJN{
+    background-image: url("images/IJN/background.gif") ;
+    background-size: cover ;
+    background-attachment: fixed ;
+    background-position: center ;
+}
+.background-UK{
+    background-image: url("images/UK/background.gif") ;
+    background-size: cover ;
+    background-attachment: fixed ;
+    background-position: center ;
+}
+.background-ITY{
+    background-image: url("images/ITY/background.gif") ;
+    background-size: cover ;
+    background-attachment: fixed ;
+    background-position: center ;
+}
+
+
+
+
+
+/* EVENT OCCURANCE */
+.eventbox {
+    display: grid ;
+    place-items: center;
+    height: auto ;
+    width: 60% ;
+    border: 3px solid rgb(43, 250, 36) ;
+    border-radius: 10px ;
+    margin: 60px auto ;
+    margin-bottom: 0px;
+    padding: 30px ;
+    background-color: rgba(2, 2, 2, 0.7) ;
+    
+}
+
+
+.event-title{
+    opacity: 1 ;
+}
+
+.event-title h2{
+    font-size: 2.5rem ;
+    font-weight: bold ;
+    margin-bottom: 10px ;
+    color: rgb(227, 236, 226) ;
+    
+    text-align: center;
+}
+
+.event-title p{
+    text-align: left;
+    font-size: 1.2rem ;
+    color: rgb(43, 250, 36) ;
+}
+
+.event-title ol{
+    list-style-type: disc ;
+    margin-left: 20px ;
+    font-size: 1.2rem ;
+    color: rgb(43, 250, 36) ;
+}
+
+.event-title ol li{
+    margin-bottom: 5px ;
+}
+
+
+
+
+
+
+/* Content area where the information is presented */
+.content-area{
+    text-align: left ;
+    margin: 20px ;
+    padding: 20px ;
+    border: 2px solid rgb(43, 250, 36) ;
+    border-radius: 10px ;
+    background-color: rgba(0, 0, 0, 0.7) ;
+    
+    height: auto ;
+    width: auto ;
+    display: flex;
+}
+
+
+
+
+/* CONTENT ON THE LEFT AND IMAGE RIGHT */
+.left-text{
+    background-color: rgba(0, 0, 0, 0.7) ;
+    border-radius: 10px ;
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+    padding-right: 10px ;
+    padding-left: 10px;
+    margin: 20px  ;
+    margin-bottom: 60px;
+    border: 2px solid rgb(43, 250, 36);
+    height: auto ;
+    width: 1760px ;
+    flex-direction: column;
+    gap: 10px ;
+    
+    justify-content: space-between ;
+}
+.left-text legend{
+    color: rgb(43, 250, 36) ;
+    font-size: 3rem ;
+    font-weight: bold ;
+    display: flex ;
+}
+.left-text h3{
+    font-size: 1.5rem ;
+    margin: 0 ;
+    font-family: 'Arial Black', Gadget, sans-serif ;
+    color: rgb(227, 236, 226);
+    
+}
+.left-text p{
+    font-size: 1.2rem ;
+    font-family: 'Courier New', Courier, monospace ;
+    color: rgb(43, 250, 36) ;
+    
+}
+
+.image-right{
+    height: 500px ;
+    height: 450px ;
+    border-radius: 10px ;
+    box-shadow: 3px rgb(43, 250, 36)  ;
+}
+.image-right img{
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100% ;
+    border: 2px rgb(43, 250, 36) solid transparent;
+    
+}
+
+
+
+/* CONTENT ON THE RIGHT AND IMAGE LEFT */
+.right-text{
+    background-color: rgba(0, 0, 0, 0.7) ;
+    border-radius: 10px ;
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+    padding-right: 10px ;
+    padding-left: 10px;
+    margin: 20px ;
+    margin-bottom: 60px;
+    border: 2px solid rgb(0, 0, 0) ;
+    height: auto ;
+    width: 1760px ;
+    flex-direction: column;
+    gap: 10px ;
+    
+    justify-content: space-between ;
+}
+.right-text legend{
+    color: rgb(43, 250, 36)  ;
+    font-size: 3rem ;
+    font-weight: bold ;
+    display: flex ;
+}
+.right-text h3{
+    font-size: 1.5rem ;
+    margin: 0 ;
+    font-family: 'Arial Black', Gadget, sans-serif ;
+    color: rgb(227, 236, 226) ;
+    
+}
+.right-text p{
+    font-size: 1.2rem ;
+    font-family: 'Courier New', Courier, monospace ;
+    color: rgb(43, 250, 36)  ;
+    
+}
+
+.image-left{
+    height: 500px ;
+    height: 450px ;
+    border-radius: 10px ;
+    box-shadow: 3px rgb(43, 250, 36)  ;
+}
+.image-left img{
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100% ;
+    border: 2px rgb(43, 250, 36)  solid transparent;
+    
+}
+
+
+
+
+
+
+
+
+/* ABOUT SITE SETTINGS */
+/* Button settings*/
+.btn{
+    height: 70px ;
+    width: 100px ;
+    border-radius: 10px ;
+
+}
+.btn a:hover{
+    background: rgb(43, 250, 36) ;    /* usually to put same color use var(--linkbgcolor) */
+    fill: black ;
+}
+.btn a:hover svg{
+    fill: black ;
+}
+.btn a{
+    display: grid ;
+    place-items: center ;
+    background-color: black ;
+    padding: 20px ;
+    border-radius: 10px ;
+    border: 1px solid rgb(43, 250, 36) ;
+}
+.btn a svg{
+    height: 50px ;
+    fill: rgb(43, 250, 36) ;
+    
+}
+.btn a::before{
+    content: attr(link) ;
+    position: absolute ;
+    background-color: var(--linkbgcolor) ;  /* background color of the pop up message*/
+    color: rgb(43, 250, 36) ;        /* Github word color */
+    text-decoration: none ;
+    padding: 10px 20px ;
+    border-radius: 10px ;
+    border: 1px solid rgb(43, 250, 36) ;
+    transform: translateY(-65px) rotate(25deg) ;
+    opacity: 0 ;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68) ;
+}
+.btn a:after{
+    content:'' ;
+    position: absolute ;
+    height: 0 ;
+    width: 0 ;
+    border-left: 8px solid transparent ;;
+    border-right: 8px solid transparent  ;
+    border-top: 10px solid  rgb(43, 250, 36)  ;       /* apply same solor instead of rgb, var(--linkbgcolor)*/
+    transform: translateY(0) rotate(25deg) ;
+    opacity: 0 ;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+.btn a:hover::before{
+    transform: translateY(-85px) rotate(0) ;
+    opacity: 1 ;
+}
+.btn a:hover::after{
+    transform: translateY(-58px) rotate(0) ;
+    opacity: 1 ;
+}
+
+
+
+/* Feedback Form Section*/
+/*Section settings*/
+.form{
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    background-color: url("images/utility/form.jpg") ;
+    background-size: cover ;
+    background-position: center ;
+    margin-top: 100px ;
+}
+
+/*Division box containing the form*/
+.login-box{
+    width: 800px ;
+    background-color: rgba(2, 2, 2, 0.7) ;
+    color: white ;
+}
+
+/*Fieldset settings*/
+.input{
+    width: 800px ;
+    height: 720px ;
+    background-color: transparent ;
+    -webkit-backdrop-filter: blur(5px) ; /*backdrop-filter*/
+    backdrop-filter: blur(5px) ;
+    border: 2px solid rgb(43, 250, 36) ;
+    border-radius: 20px ;
+    padding: 30px 20px 20px 20px ;
+}
+.input legend{
+    font-size: 36px ;
+    text-align: center ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    color: rgb(43, 250, 36) ;
+}
+
+/*Paragraph settings*/
+.fieldtext{
+    text-align: center ;
+    font-size: 30px ;
+    color: white ;
+    padding-bottom: 30px ;
+}
+
+/*Division box of each input box */
+.input-box{
+    display: flex ;
+    justify-content: space-around ;
+    width: 83% ;
+    height: 50px ;
+    background: rgb(70, 67, 67) ;
+    margin-top: 30px ;
+    padding-bottom: 20px ;
+}
+.input-box input{
+    width: 100% ;
+    height: 50px ;
+    background: transparent ;
+    border: 1px solid rgb(43, 250, 36) ;
+    outline: none ;
+    border-radius: 10px ;
+    padding: 10px 10px 10px 10px ;
+    
+}
+.input-box-textarea{
+    display: flex ;
+    justify-content: space-around ;
+    width: 83% ;
+    height: 120px ;
+    background: rgb(70, 67, 67) ;
+    margin-top: 30px ;
+    padding-bottom: 23px ;
+}
+.input-box-textarea textarea{
+    width: 100% ;
+    height: 120px ;
+    background: transparent ;
+    border: 1px solid rgb(43, 250, 36);
+    outline: none ;
+    border-radius: 10px ;
+    padding: 10px 10px 10px 10px ;
+}
+.input-box-textarea textarea::placeholder{
+    color: rgb(43, 250, 36);
+    font-size: large ;
+    opacity: 1 ;
+}
+
+.input-box input::placeholder{
+    color: rgb(43, 250, 36);
+    font-size: medium  ;
+    opacity: 1 ;
+}
+.input-box input:focus,
+.input-box-textarea textarea:focus{
+    color: rgb(43, 250, 36) ;
+}
+
+/*Submit button settings*/
+.form-btn{
+    width: 160px ;
+    height: 60px ;
+    border: 2px solid rgb(43, 250, 36);
+    outline: none ;
+    border-radius: 20px ;
+    cursor: pointer ;
+    background: transparent ;
+    color: rgb(43, 250, 36) ;
+    font-size: 30px ;
+    margin-top: 60px ;
+    transition: transparent 0.3s ease, transform 0.1s ;
+}
+.form-btn::before{
+    content: ' ';
+    background: transparent ;
+    color: rgb(43, 250, 36) ;
+
+}
+.form-btn::after{
+    content: ' ';
+    background: rgb(43, 250, 36) ;
+}
+.form-btn:hover{
+    background: rgb(43, 250, 36) ;
+    color: black ;
+    text-decoration: none ;
+}
+
+
+
+
+/* MOBILE USERS SETTINGS */
+@media (max-width: 768px){
+    .main-header h1{
+        font-size: 2rem ;
+    }
+    .main-header p{
+        font-size: 1rem ;
+    }
+    .btn{
+        padding: 0.8rem 1.5rem ;
+        font-size: 1rem ;
+    }
+    .nav-links{
+        position: absolute ;
+        background: rgb(129, 121, 121);
+        height: 100vh ;
+        width: 50% ;
+        top: 0 ;
+        right: 0 ;
+        text-align: left ;
+        z-index: 2 ;
+    }
+    .nav-links ul li{
+        display: block ;
+        padding: 5px 10px ;
+        padding-top: 20px ;
+        font-size: 10px;
+    }
+    .country-pickUSA,
+    .country-pickUSSR,
+    .country-pickGER,
+    .country-pickFRA,
+    .country-pickUK,
+    .country-pickJPN,
+    .country-pickITY{
+        width: 300px ;
+        height: 150px ;
+        margin: 10px ;
+        flex-direction: column;
+    }
+
+    .left-text p,h3{
+        width: 300px ;
+        height: auto ;
+        font-size: 12px ;
+    }
+
+    .right-text p,h3{
+        width: 300px ;
+        height: auto ;
+        font-size: 12px ;
+    }
+
+    .image-left{
+        height: auto ;
+        width: auto ;
+    }
+
+    .image-right{
+        height: auto ;
+        width: auto ;
+    }
+
+    
+}

@@ -1,0 +1,86 @@
+<!Doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>StudentRegistration</title>
+            <style>
+                .greenbar{
+                    background-color: lightgreen ;
+                }
+            </style>
+        </head>
+    
+
+    <body>
+
+        <h1>Student Registration </h1>
+        <p align="right">Location: Mangalore <br>2026-01-23 <br></p>
+        
+        <div class="greenbar">Student Data</div><br><br>
+        <center>
+            <form >
+                <table>
+
+                    <tr>
+                        <td><label for="name">Name:</label></td><td><input type="text" name="name" placeholder="Enter your name"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="lastname">Lastname:</label></td><td><input type="text" name="lastname" placeholder="Enter your lastname"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="dob">Date of Birth:</label></td><td><input type="date" name="dob" placeholder="Select your date of birth"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="sex">Sex:</label></td>
+                        <td>
+                            <input type="radio" name="sex" value="male" placeholder="Male"> Male
+                            <input type="radio" name="sex" value="female" placeholder="Female"> Female
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="phone">Phone No:</label></td><td><input type="number" name="phone" placeholder="Enter your phone number"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="email">Email:</label></td><td><input type="email" name="email" placeholder="Enter your email"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="address">Address:</label></td><td><textarea rows="3" cols="30" name="address" placeholder="Enter your address"></textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="grade10">10<sup>th</sup> Grade:</label></td><td><input type="file" name="grade10" placeholder="Upload 10th Grade Document"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="grade12">12<sup>th</sup> Grade:</label></td><td><input type="file" name="grade12" placeholder="Upload 12th Grade Document"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="course">Course:</label></td>
+                        <td>
+                            <select name="course" title="Select your course">
+                                <option value="bca">BCA</option>
+                                <option value="bba">BBA</option>
+                                <option value="bcom">B.Com</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    </table>
+
+
+                        <label for="terms">
+                            <input id="terms" type="checkbox" name="terms" title="Accept terms and conditions"> I accept the <a href="#">terms and conditions</a>
+                        </label><br>
+                        <button type="submit">Submit</button><button type="reset">Reset</button><br>
+            </form>
+        </center>
+    </body>
+</html>
