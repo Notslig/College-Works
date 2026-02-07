@@ -9,7 +9,7 @@
 
 
 <body>
-<section class="background-UK">
+<section class="background-IJN">
         <section class="country-header">
                 <nav>
                         <a href="" ><img src="images/utility/icon.png" alt="World War Chronographic"> </a>
@@ -52,55 +52,18 @@
         
 <br><br>
 
-<section class="content-area">
+        <section class="content-area">
     <fieldset class="left-text">
-        <legend>World War I Begins (1914)</legend>
-        <h3>Britain Enters the Great War</h3><br>
+        <legend>World War I (1914)</legend>
+        <h3>Japan Expands Influence</h3><br>
         <p>
-            The United Kingdom entered World War I after Germany invaded Belgium.
-            Britain mobilized its navy and army to defend Europe.
+            Japan joined the Allies and seized German colonies in Asia.
             <br><br>
-            <strong>Achievement:</strong> Naval dominance through Royal Navy blockade.
+            <strong>Achievement:</strong> Expanded Pacific control.
         </p>
     </fieldset>
     <div class="image-right">
-        <img src="images/UK/begins.jpg" alt="UK WW1">
-    </div>
-</section>
-
-<br><br>
-
-<section class="content-area">
-    <div class="image-left">
-        <img src="images/UK/somme.jpg" alt="Somme">
-    </div>
-    <fieldset class="right-text">
-        <legend>Battle of the Somme (1916)</legend>
-        <h3>Costly Offensive</h3><br>
-        <p>
-            British forces launched a massive assault against German trenches.
-            <br><br>
-            <strong>Casualties:</strong> ~420,000 British.
-            <br>
-            <strong>Impact:</strong> First major use of tanks.
-        </p>
-    </fieldset>
-</section>
-
-<br><br>
-
-<section class="content-area">
-    <fieldset class="left-text">
-        <legend>End of World War I (1918)</legend>
-        <h3>Victory at Great Cost</h3><br>
-        <p>
-            Britain emerged victorious but deeply scarred.
-            <br><br>
-            <strong>Casualties:</strong> ~900,000 dead.
-        </p>
-    </fieldset>
-    <div class="image-right">
-        <img src="images/UK/end.jpg" alt="WW1 End">
+        <img src="images/IJN/influnce.jpg" alt="Japan WW1">
     </div>
 </section>
 
@@ -108,8 +71,8 @@
 
 <section class="eventbox">
         <div class="event-title">
-            <h2>End of World War I</h2>
-            <p>With the help of Allies they marked the end of the first World War</p>
+            <h2>End of WWI</h2>
+            <p>When the war ended Japan kept watching Germany and U.S. and made their moves</p>
         </div>
     </section>
 
@@ -117,15 +80,15 @@
 
 <section class="content-area">
     <div class="image-left">
-        <img src="images/UK/britian.jpg" alt="Britain 1940">
+        <img src="images/IJN/pearl.gif" alt="Pearl Harbor">
     </div>
     <fieldset class="right-text">
-        <legend>Battle of Britain (1940)</legend>
-        <h3>Defending the Skies</h3><br>
+        <legend>Attack on Pearl Harbor (1941)</legend>
+        <h3>War with the United States</h3><br>
         <p>
-            RAF successfully defended Britain from German air assault.
+            Japan launched a surprise attack on the US Pacific Fleet.
             <br><br>
-            <strong>Achievement:</strong> Prevented invasion.
+            <strong>Achievement:</strong> Temporary naval dominance.
         </p>
     </fieldset>
 </section>
@@ -134,16 +97,16 @@
 
 <section class="content-area">
     <fieldset class="left-text">
-        <legend>D-Day (1944)</legend>
-        <h3>Return to Europe</h3><br>
+        <legend>Battle of Midway (1942)</legend>
+        <h3>Turning Point in the Pacific</h3><br>
         <p>
-            British troops landed at Gold and Sword beaches.
+            Japan lost four aircraft carriers to the US Navy.
             <br><br>
-            <strong>Achievement:</strong> Opened Western Front.
+            <strong>Impact:</strong> Loss of offensive capability.
         </p>
     </fieldset>
     <div class="image-right">
-        <img src="images/UK/dday.jpg" alt="D-Day">
+        <img src="images/IJN/midway.jfif" alt="Midway">
     </div>
 </section>
 
@@ -151,25 +114,42 @@
 
 <section class="content-area">
     <div class="image-left">
-        <img src="images/UK/ve.jpg" alt="VE Day">
+        <img src="images/IJN/iwajima.jpg" alt="Iwo Jima">
     </div>
     <fieldset class="right-text">
-        <legend>Victory in Europe (1945)</legend>
-        <h3>War Ends in Europe</h3><br>
+        <legend>Battle of Iwo Jima (1945)</legend>
+        <h3>Relentless Defense</h3><br>
         <p>
-            Germany surrendered unconditionally.
+            Japanese forces fought to near total annihilation.
             <br><br>
-            <strong>WWII Casualties:</strong> ~450,000.
+            <strong>Casualties:</strong> ~20,000 Japanese dead.
         </p>
     </fieldset>
 </section>
 
 <br><br>
 
+<section class="content-area">
+    <fieldset class="left-text">
+        <legend>Atomic Bombings (1945)</legend>
+        <h3>Unprecedented Destruction</h3><br>
+        <p>
+            Hiroshima and Nagasaki were devastated.
+            <br><br>
+            <strong>Outcome:</strong> Japan surrendered.
+        </p>
+    </fieldset>
+    <div class="image-right">
+        <img src="images/IJN/atomic.jpg" alt="Japan Surrender">
+    </div>
+</section>
+
+<br><br>
+
     <section class="eventbox">
         <div class="event-title">
-            <h2>End of World War II</h2>
-            <p>With their effort they ended helped prevent the continuation  World War II  </p>
+            <h2>End of War </h2>
+            <p>Utter defeat with unconditional surrender </p>
         </div>
     </section>
 
@@ -183,6 +163,10 @@
                 <p> Made by <b>NOTSLIG</b> </p>
         </section>
         </center>
+
+        <?php
+
+        ?>
 
 </body>
 </html>

@@ -283,5 +283,9 @@
         </section>
         </center>
 
+        <?php
+
+        ?>
+
 </body>
 </html>

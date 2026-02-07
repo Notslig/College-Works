@@ -9,7 +9,7 @@
 
 
 <body>
-<section class="background-FR">
+<section class="background-ITY">
         <section class="country-header">
                 <nav>
                         <a href="" ><img src="images/utility/icon.png" alt="World War Chronographic"> </a>
@@ -30,7 +30,7 @@
                 </nav>
         </section>
 
-
+<br><br>
 
         <section class="eventbox">
         <div class="event-title">
@@ -54,43 +54,25 @@
 
         <section class="content-area">
     <fieldset class="left-text">
-        <legend>World War I Begins (1914)</legend>
-        <h3>Defending the Republic</h3><br>
+        <legend>World War I (1915)</legend>
+        <h3>Italy Joins the Allies</h3><br>
         <p>
-            France resisted German invasion.
+            Italy fought Austria-Hungary along mountainous fronts.
             <br><br>
-            <strong>Casualties:</strong> ~1.4 million dead.
+            <strong>Casualties:</strong> ~650,000 dead.
         </p>
     </fieldset>
     <div class="image-right">
-        <img src="images/FR/begins.jpg" alt="France WW1">
+        <img src="images/ITY/WW1Italy.jpg" alt="Italy WW1">
     </div>
 </section>
 
 <br><br>
 
-<section class="content-area">
-    <div class="image-left">
-        <img src="images/FR/verdun.jpg" alt="Verdun">
-    </div>
-    <fieldset class="right-text">
-        <legend>Battle of Verdun (1916)</legend>
-        <h3>They Shall Not Pass</h3><br>
-        <p>
-            France held Verdun at enormous cost.
-            <br><br>
-            <strong>Achievement:</strong> National symbol of resistance.
-        </p>
-    </fieldset>
-</section>
-
-<br><br>
-
-
-    <section class="eventbox">
+<section class="eventbox">
         <div class="event-title">
-            <h2>Ended of World War I</h2>
-            <p>Played a mafor role in defending the allies </p>
+            <h2>End of World War I</h2>
+            <p>Not much influence but played a amjor role in the war</p>
         </div>
     </section>
 
@@ -98,17 +80,34 @@
 <br><br>
 
 <section class="content-area">
-    <fieldset class="left-text">
-        <legend>German Invasion (1940)</legend>
-        <h3>Fall of France</h3><br>
+    <div class="image-left">
+        <img src="images/ITY/enterww2.png" alt="Axis">
+    </div>
+    <fieldset class="right-text">
+        <legend>Italy Enters WWII (1940)</legend>
+        <h3>Alliance with Germany</h3><br>
         <p>
-            France was defeated in six weeks.
+            Italy joined Axis powers seeking expansion.
             <br><br>
-            <strong>Outcome:</strong> Occupation and Vichy regime.
+            <strong>Outcome:</strong> Military struggles.
+        </p>
+    </fieldset>
+</section>
+
+<br><br>
+
+<section class="content-area">
+    <fieldset class="left-text">
+        <legend>Allied Invasion of Italy (1943)</legend>
+        <h3>Collapse of Fascist Rule</h3><br>
+        <p>
+            Allied landings led to Mussolini’s downfall.
+            <br><br>
+            <strong>Achievement:</strong> Italy switches sides.
         </p>
     </fieldset>
     <div class="image-right">
-        <img src="images/FR/paris.jpg" alt="Fall of France">
+        <img src="images/ITY/campign.jpg" alt="Italy 1943">
     </div>
 </section>
 
@@ -116,25 +115,25 @@
 
 <section class="content-area">
     <div class="image-left">
-        <img src="images/FR/libre.jfif" alt="Liberation">
+        <img src="images/ITY/surrender.jpg" alt="End">
     </div>
     <fieldset class="right-text">
-        <legend>Liberation of France (1944)</legend>
-        <h3>Freedom Restored</h3><br>
+        <legend>End of WWII (1945)</legend>
+        <h3>War Ends in Ruin</h3><br>
         <p>
-            Allied forces liberated Paris.
+            Italy emerged devastated but liberated.
             <br><br>
-            <strong>Achievement:</strong> Restoration of sovereignty.
+            <strong>WWII Casualties:</strong> ~450,000.
         </p>
     </fieldset>
 </section>
 
 <br><br>
 
-    <section class="eventbox">
+<section class="eventbox">
         <div class="event-title">
             <h2>End of War</h2>
-            <p>War ended with liberating france from the fuhrer</p>
+            <p>Italy surrendered and thier kingdom collapsed </p>
         </div>
     </section>
 
@@ -149,5 +148,10 @@
         </section>
         </center>
 
+        <?php
+
+        ?>
+
 </body>
 </html>
+
