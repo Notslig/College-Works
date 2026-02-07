@@ -45,7 +45,7 @@
 
         <section class="form">
                 <div class="login-box">
-                        <form method="post" name="feedback">
+                        <form action="script.php" method="post" name="feedback">
 
                                 <fieldset class="input">
 
@@ -55,18 +55,18 @@
                                         <p class="fieldtext">This section is for public feedback for any suggestions and changes needed to be done to the information present in the webpage </p>
 
                                         <div class="input-box">
-                                                <input type="text" placeholder="Username">
+                                                <input type="text" placeholder="Username" name="user">
                                         </div>
 
                                         <div class="input-box">
-                                                <input type="email" placeholder="Email">
+                                                <input type="email" placeholder="Email" name="email">
                                         </div>
 
                                         <div class="input-box-textarea">
-                                                <textarea rows="20" cols="30" placeholder="Feedback"></textarea>
+                                                <textarea rows="20" cols="30" placeholder="Feedback" name="feedback"></textarea>
                                         </div>
 
-                                        <input type="submit" value="Send" class="form-btn">
+                                        <input type="submit" value="Send" class="form-btn" name="submit">
 
                                         </center>
 
@@ -82,6 +82,17 @@
                 <p> Made by <b>NOTSLIG</b> </p>
         </section>
         </center>
+
+        <?php
+                if(isset($_POST['submit'])){
+
+                        $username = $_POST['user'] ;
+                        $email = $_POST['email'] ;
+                        $text = $_POST['feedback'] ;
+
+                        echo '<br>' ;
+                }
+        ?>
 
 </body>
 </html>
