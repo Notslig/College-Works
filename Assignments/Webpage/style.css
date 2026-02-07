@@ -748,6 +748,43 @@ nav img{
 
 
 
+/*Credits section*/
+.credits {
+    margin: 50px 0px 70px 0px ;
+    padding-bottom: 30px ;
+    border: none ;
+    display: flex ;
+    justify-content: center ;
+    align-items: last baseline ;
+    height: 300px ;
+    width: 600px ;
+    background: black ;
+    color: rgb(43, 250, 36) ;
+}
+.credits p{
+    font-size: 20px ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none ;
+    color: rgb(43, 250, 36) ;
+}
+.credits p b::before{
+    content: ' ';
+    color: rgb(43, 250, 36) ;
+    text-decoration: none ;
+}
+.credits p b:hover{
+    transition: transform 0.5s ease-in-out 0.7s;
+    color: rgb(43, 250, 36) ;
+    text-decoration: underline ;
+}
+.credits img{
+    filter: invert(48%) sepia(80%) saturate(600%) hue-rotate(90deg);
+    justify-content: space-between ;
+    align-items: center ;
+    height: 32px ;
+    width: 38px ;
+}
+
 
 /* MOBILE USERS SETTINGS */
 @media (max-width: 768px){
