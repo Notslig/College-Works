@@ -1,41 +1,65 @@
 <?php
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
+session_start(); 
 
-        $username = $_POST['user'] ;
-        $email = $_POST['email'] ;
-        $message = $_POST['feedback'] ;
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-        echo NewPageHeader() ;
-        ResponseBody($username, $email, $message) ;
-        PageFooter() ;
-
+    if (!isset($_SESSION['responses'])) {
+        $_SESSION['responses'] = [];
     }
+
+    $_SESSION['responses'][] = [
+        'user' => htmlspecialchars($_POST['user']),
+        'email' => htmlspecialchars($_POST['email']),
+        'message' => htmlspecialchars($_POST['feedback'])
+    ];
+}
+
+NewPageHeader();
+ResponseBody();
+PageFooter();
 
 
 function NewPageHeader(){
-            echo "<!doctype html>" ;
-            echo "<html lang='en'>" ;
-            echo "<head>" ;
-            echo "<title>Responses</title>" ;
-            echo "</head>" ;
+    echo "<!doctype html>";
+    echo "<html lang='en'>";
+    echo "<head>";
+    echo "<title>Responses</title>";
+    echo "<style>
+        .response-box {
+            border: 2px solid #333;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 8px;
+            background: #f4f4f4;
         }
+    </style>";
+    echo "</head>";
+    echo "<body>";
+}
 
-function ResponseBody($username, $email, $message){
-    echo "<body>" ;
-    
-    echo "<div style=''>" ;
-    echo "Message from: $username \n <br><br>" ;
-    echo "Sent from: $email \n <br>" ;
-    echo "<h2>Feedback Details:</h2><br>" ;
-    echo "$feedback" ;
-    echo "</div>" ;
 
-    echo "</body>" ;
+function ResponseBody(){
+
+    if (empty($_SESSION['responses'])) {
+        echo "<p>No responses yet.</p>";
+        return;
+    }
+
+    foreach ($_SESSION['responses'] as $box) {
+        echo "<div class='response-box'>";
+        echo "<strong>Message from:</strong> {$box['user']}<br>";
+        echo "<strong>Email:</strong> {$box['email']}<br><br>";
+        echo "<h3>Feedback:</h3>";
+        echo "<p>{$box['message']}</p>";
+        echo "</div>";
+    }
 }
 
 function PageFooter(){
-    echo "</html>" ;
+    echo "</body>";
+    echo "</html>";
 }
+
 
 ?>

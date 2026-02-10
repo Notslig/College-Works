@@ -44,7 +44,7 @@
 
 
         <section class="form">
-                <div class="login-box">
+                <div class="feedback-box">
                         <form action="script.php" method="post" name="feedback">
 
                                 <fieldset class="input">
@@ -83,16 +83,6 @@
         </section>
         </center>
 
-        <?php
-                if(isset($_POST['submit'])){
-
-                        $username = $_POST['user'] ;
-                        $email = $_POST['email'] ;
-                        $text = $_POST['feedback'] ;
-
-                        echo '<br>' ;
-                }
-        ?>
 
 </body>
 </html>
