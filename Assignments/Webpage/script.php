@@ -1,6 +1,8 @@
 <?php
 
-session_start(); 
+session_start();
+
+$clear = false ;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -13,6 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         'email' => htmlspecialchars($_POST['email']),
         'message' => htmlspecialchars($_POST['feedback'])
     ];
+}
+
+if ($clear == true ){
+    session_destroy() ;
 }
 
 NewPageHeader();
@@ -57,6 +63,7 @@ function ResponseBody(){
 }
 
 function PageFooter(){
+    echo "<p> <a href='About.html'>Return to Feedback Page </a> </p> " ;
     echo "</body>";
     echo "</html>";
 }

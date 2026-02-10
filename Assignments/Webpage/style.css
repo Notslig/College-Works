@@ -83,6 +83,7 @@ nav img{
     color: rgb(43, 250, 36) ;
     text-decoration: none ;
     font-size: 1rem ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
 
 /* Hovering effect  */
@@ -111,6 +112,7 @@ nav img{
     text-align: center ;
     font-size: large ;
     font-weight: 200 ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     outline: black solid 2px;
     opacity: 0.6 ;
     background-color: rgb(41, 40, 40) ;
@@ -120,23 +122,27 @@ nav img{
     font-size: 3rem ;
     margin-top: 10px ;
     margin-bottom: 20px ; 
-    color:rgb(255, 255, 255) ;
-    opacity: 1 ;
+    color:white ;
+    opacity: 2 ;
     justify-content: center ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
 .main-header p{
-    color: rgb(241, 238, 238) ;
+    color: white ;
     font-size: 1.2rem ;
-    margin-bottom: 40px ; 
-    opacity: 1 ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    margin-bottom: 40px ;
+    opacity: 2 ;
 }
 .black-bold{
     color: rgb(43, 250, 36) ;
     font-weight: bold ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
 .white-bold{
     color: rgb(43, 250, 36) ;
     font-weight: bold ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
 
 
@@ -170,6 +176,7 @@ nav img{
 .country-border legend{
     font-size: 2rem ;
     font-weight: bold ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     color: rgb(43, 250, 36) ;
 }
 /*each row settings*/
@@ -397,13 +404,14 @@ nav img{
     font-weight: bold ;
     margin-bottom: 10px ;
     color: rgb(227, 236, 226) ;
-    
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     text-align: center;
 }
 
 .event-title p{
     text-align: left;
     font-size: 1.2rem ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     color: rgb(43, 250, 36) ;
 }
 
@@ -455,25 +463,25 @@ nav img{
     width: 1760px ;
     flex-direction: column;
     gap: 10px ;
-    
     justify-content: space-between ;
 }
 .left-text legend{
     color: rgb(43, 250, 36) ;
     font-size: 3rem ;
     font-weight: bold ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     display: flex ;
 }
 .left-text h3{
     font-size: 1.5rem ;
     margin: 0 ;
-    font-family: 'Arial Black', Gadget, sans-serif ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     color: rgb(227, 236, 226);
     
 }
 .left-text p{
     font-size: 1.2rem ;
-    font-family: 'Courier New', Courier, monospace ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     color: rgb(43, 250, 36) ;
     
 }
@@ -516,18 +524,19 @@ nav img{
     color: rgb(43, 250, 36)  ;
     font-size: 3rem ;
     font-weight: bold ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     display: flex ;
 }
 .right-text h3{
     font-size: 1.5rem ;
     margin: 0 ;
-    font-family: 'Arial Black', Gadget, sans-serif ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     color: rgb(227, 236, 226) ;
     
 }
 .right-text p{
     font-size: 1.2rem ;
-    font-family: 'Courier New', Courier, monospace ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     color: rgb(43, 250, 36)  ;
     
 }
@@ -703,19 +712,26 @@ nav img{
 .input-box-textarea textarea::placeholder{
     color: rgb(43, 250, 36);
     font-size: large ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     opacity: 1 ;
 }
 
 .input-box input::placeholder{
     color: rgb(43, 250, 36);
     font-size: medium  ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     opacity: 1 ;
 }
 .input-box input:focus,
 .input-box-textarea textarea:focus{
     color: rgb(43, 250, 36) ;
+    background-color: rgb(70, 67, 67) ;
 }
-
+.input-box input::placeholder::after,
+.input-box-textarea textarea::placeholder::after{
+    background-color: rgb(70, 67, 67) ;
+    color: rgb(43, 250, 36) ;
+}
 /*Submit button settings*/
 .form-btn{
     width: 160px ;
@@ -727,6 +743,7 @@ nav img{
     background: transparent ;
     color: rgb(43, 250, 36) ;
     font-size: 30px ;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     margin-top: 60px ;
     transition: transparent 0.3s ease, transform 0.1s ;
 }
