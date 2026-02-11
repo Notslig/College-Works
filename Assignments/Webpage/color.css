@@ -1,0 +1,7 @@
+.color{
+    color: linear-gradient(135deg, #000000, #6b2727, #d11717) ; /* div header boxes */
+    background: rgb(255, 19, 19) ; /* font color */
+    background: linear-gradient(135deg, #d11717, #0a0505) ;
+    background: linear-gradient(90deg, #000000, #4b0e0e, #a00f0f); /* button box */
+    background: linear-gradient(90deg, #8f2d2d, #272525,#000000,  #272525, #8f2d2d) ; /* background fill color */
+}
