@@ -3,3 +3,6 @@
 
 # Ada Library Information
 *.ali
+
+#Class file from java
+*.class
