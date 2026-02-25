@@ -7,7 +7,8 @@ class tourism(ABC):
     
     def __init__(self,custname):
         self.custname: str = custname
-        
+
+    @abstractmethod
     def booking(self,value):
         pass
     

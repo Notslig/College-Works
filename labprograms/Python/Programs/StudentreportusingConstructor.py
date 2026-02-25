@@ -1,8 +1,9 @@
 class student:
+    marks = {}
+    
     def __init__(self, name, rno):
         self.name: str = name 
         self.rno: int = rno 
-    marks = {}
         
     def readmarks(self, m1, m2, m3, m4):
         self.marks = {"Python:":m1, "CN:":m2,"OS:":m3,"FA:":m4}
