@@ -3,13 +3,13 @@ class rectangle:
         self.length = length
         self.breadth = breadth
 
-    def area(self):
+    def area(self)-> int:
         return self.length * self.breadth
 
-    def perimeter(self):
+    def perimeter(self)-> int:
         return 2 * (self.length + self.breadth)
     
-    def display(self):
+    def display(self)-> None:
         print("Rectangle Details:")
         print(f"Length = {self.length}, Breadth = {self.breadth}")
         print(f"Area = {self.area()}")
@@ -20,13 +20,13 @@ class box(rectangle):
         super().__init__(length, breadth)
         self.height = height
 
-    def volume(self):
+    def volume(self)-> int:
         return self.area() * self.height
-    
-    def area(self):
+
+    def area(self)-> int:
         return 2 * (self.length * self.breadth + self.length * self.height + self.breadth * self.height)
 
-    def display(self):
+    def display(self)-> None:
         super().display()
         print("\n Box Details:")
         print(f"Height = {self.height}")
