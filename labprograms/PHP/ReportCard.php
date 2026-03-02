@@ -77,7 +77,7 @@
             public function display(){
 
                 echo
-                "<table border='2'>
+                "<br><table border='2' cellpadding='2px'>
                     <tr><td colspan='2' align='center'> <h4>Result</h4></td></tr>
                     <tr><td colspan='2'>College Name</td></tr>
                     <tr><td colspan='2'>Report Card</td></tr>
@@ -92,7 +92,7 @@
                     <tr><td>Subject 5:</td><td>$this->sub5</td></tr>
                     <tr><td>Subject 6:</td><td>$this->sub6</td></tr>
                     <tr><td>Total:</td><td>$this->total</td></tr>
-                    <tr><td>Percentage:</td><td>$this->percentage %</td></tr>
+                    <tr><td>Percentage:</td><td>".round($this->percentage)."%</td></tr>
                     <tr><td>Grade:</td> " ;
 
                 echo  ($this->result == 'Pass') ?  "<td bgcolor='green' style='color:white ;'>PASS</td>" : "<td bgcolor='red'>FAIL</td>" ;
