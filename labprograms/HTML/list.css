@@ -1,0 +1,20 @@
+.red-box{
+    background-color: red;
+    padding: 10px ;
+}
+.pink-box{
+    background-color: pink;
+    padding: 10px ;
+}
+.blue-box{
+    background-color: blue;
+    padding: 10px ;
+}
+.inner{
+    background-color: white;
+    padding: 10px ;
+}
+.blue-box ol{
+    list-style-image:url(tick.png) ;
+    list-style-position: inside;
+}

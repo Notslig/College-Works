@@ -57,7 +57,7 @@
 
         <?php
 
-        $showForm = TRUE;
+        $showForm = True;
         if (isset($_POST['username'])) {
             $name = $_POST['name'];
             $regno = $_POST['regno'];
