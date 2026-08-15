@@ -1,8 +1,9 @@
+package com.jdbcprgms;
 import java.sql.*;
 import java.util.*;
 
 public class libraryManagement {
-    Connection con;
+    Connection con ;
     PreparedStatement ps;
     Scanner sc = new Scanner(System.in);
 
@@ -16,9 +17,10 @@ public class libraryManagement {
         }
     }
 
-    public void input() {
-        try {
+    public void input(){
+        try{
             connect();
+            System.out.println();
             System.out.println(" Enter Book ID,title,author,publications,price,quantity");
             int id = sc.nextInt();
             sc.nextLine();
@@ -30,34 +32,35 @@ public class libraryManagement {
 
             String sql = "INSERT INTO BOOKS VALUES(?,?,?,?,?,?)";
             ps = con.prepareStatement(sql);
-            ps.setInt(1, id);
-            ps.setString(2, title);
-            ps.setString(3, author);
-            ps.setString(4, publications);
-            ps.setDouble(5, price);
-            ps.setInt(6, quantity);
+            ps.setInt(1,id);
+            ps.setString(2,title);
+            ps.setString(3,author);
+            ps.setString(4,publications);
+            ps.setDouble(5,price);
+            ps.setInt(6,quantity);
             ps.executeUpdate();
-        } catch (Exception e) {
+        }catch(Exception e){
             e.printStackTrace();
         }
-    }
 
-    public void delete() {
-        try {
+    }
+    public void delete(){
+        try{
             connect();
             System.out.println("Enter Book ID to delete");
-            int id = this.sc.nextInt();
+            int id = sc.nextInt();
             String sql = "DELETE FROM BOOKS WHERE ID=?";
             ps = con.prepareStatement(sql);
-            ps.setInt(1, id);
+            ps.setInt(1,id);
             ps.executeUpdate();
-        } catch (Exception e) {
+        }
+        catch(Exception e){
             e.printStackTrace();
         }
     }
 
-    public void updatePrice() {
-        try {
+    public void updatePrice(){
+        try{
             connect();
             System.out.println("Enter Book ID to update price");
             int id = sc.nextInt();
@@ -65,16 +68,16 @@ public class libraryManagement {
             double price = sc.nextDouble();
             String sql = "UPDATE BOOKS SET PRICE=? WHERE ID=?";
             ps = con.prepareStatement(sql);
-            ps.setDouble(1, price);
-            ps.setInt(2, id);
+            ps.setDouble(1,price);
+            ps.setInt(2,id);
             ps.executeUpdate();
-        } catch (Exception e) {
+        }catch(Exception e){
             e.printStackTrace();
         }
     }
 
-    public void updateQuantity() {
-        try {
+    public void updateQuantity(){
+        try{
             connect();
             System.out.println("Enter Book ID to update quantity");
             int id = sc.nextInt();
@@ -82,40 +85,55 @@ public class libraryManagement {
             int quantity = sc.nextInt();
             String sql = "UPDATE BOOKS SET QUANTITY=? WHERE ID=?";
             ps = con.prepareStatement(sql);
-            ps.setInt(1, quantity);
-            ps.setInt(2, id);
+            ps.setInt(1,quantity);
+            ps.setInt(2,id);
             ps.executeUpdate();
-        } catch (Exception e) {
+        }catch(Exception e){
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        libraryManagement lib = new libraryManagement();
-        try {
-            while(true) {
-                System.out.println("""
-                            1. Add Book
-                            2. Delete Book
-                            3. Update Price
-                            4. Update Quantity
-                            5. Display Books
-                            6. Exit
-                """);
-                System.out.print("Enter your choice: ");
-                int choice = sc.nextInt();
-                switch (choice) {
-                    case 1:lib.input();break;
-                    case 2:lib.delete();break;
-                    case 3:lib.updatePrice();break;
-                    case 4: lib.updateQuantity();break;
-                    case 5: lib.display(); break;
-                    case 6: System.out.println("Exiting..."); break;
-                    default:System.out.println("Invalid choice");
-                }
+    public void display(){
+        try{
+            connect();
+            String sql = "SELECT * FROM BOOKS";
+            ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            System.out.println("ID\tTITLE\tAUTHOR\tPUBLICATIONS\tPRICE\tQUANTITY");
+            while(rs.next()){
+                System.out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getDouble(5)+"\t"+rs.getInt(6));
             }
-        } finally {
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int choice;
+        libraryManagement lib = new libraryManagement();
+        try{
+            while(true){
+                System.out.println("""
+                    1. Add Book
+                    2. Delete Book
+                    3. Update Price
+                    4. Update Quantity
+                    5. Display Books
+                    6. Exit
+                """);
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+            switch(choice){
+                case 1:lib.input();break;
+                case 2:lib.delete(); break;
+                case 3:lib.updatePrice();break;
+                case 4:lib.updateQuantity();break;
+                case 5:lib.display();break;
+                case 6:System.out.println("Exiting..."); break;
+                default: System.out.println("Invalid choice");
+            }
+            }
+        }finally{
             sc.close();
         }
     }
