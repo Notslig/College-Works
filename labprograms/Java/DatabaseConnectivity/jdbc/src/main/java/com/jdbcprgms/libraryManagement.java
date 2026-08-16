@@ -1,6 +1,9 @@
 package com.jdbcprgms;
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
 
 public class libraryManagement {
     Connection con ;
@@ -76,6 +79,7 @@ public class libraryManagement {
         }
     }
 
+    @SuppressWarnings("CallToPrintStackTrace")
     public void updateQuantity(){
         try{
             connect();
@@ -124,13 +128,13 @@ public class libraryManagement {
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
             switch(choice){
-                case 1:lib.input();break;
-                case 2:lib.delete(); break;
-                case 3:lib.updatePrice();break;
-                case 4:lib.updateQuantity();break;
-                case 5:lib.display();break;
-                case 6:System.out.println("Exiting..."); break;
-                default: System.out.println("Invalid choice");
+                case 1 -> lib.input();
+                case 2 -> lib.delete();
+                case 3 -> lib.updatePrice();
+                case 4 -> lib.updateQuantity();
+                case 5 -> lib.display();
+                case 6 -> System.out.println("Exiting...");
+                default -> System.out.println("Invalid choice");
             }
             }
         }finally{
