@@ -12,9 +12,12 @@ public class studentResult {
     static Statement st;
     static void connect(){
         try{
-            Class.forName("");
-            con =  DriverManager.getConnection(null);
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con =  DriverManager.getConnection("jdbc:mysql:College-Works/labprograms/Java/DatabaseConnectivity/jdbc/databases/studentResult.db","root","password");
+            con.createStatement().execute("CREATE TABLE IF NOT EXISTS STUDENT (ID INT PRIMARY KEY, NAME VARCHAR(100), BATCH VARCHAR(100))");
+            con.createStatement().execute("CREATE TABLE IF NOT EXISTS RESULT (ID INT PRIMARY KEY, MARKS1 INT, MARKS2 INT, MARKS3 INT, TOTAL INT, AVG DOUBLE, RESULT VARCHAR(10), FOREIGN KEY(ID) REFERENCES STUDENT(ID))");
             st = con.createStatement();
+            
         }catch(Exception e ){
             e.printStackTrace();
         }
@@ -37,6 +40,8 @@ public class studentResult {
     static void calculate(){
         try{
             connect();
+            System.out.println("Enter the ID of student to calculate result:");
+            int id = Integer.parseInt(sc.nextLine());
             System.out.println("Enter marks of three subjects:");
             int m1 = Integer.parseInt(sc.nextLine());
             int m2 = Integer.parseInt(sc.nextLine());
@@ -49,9 +54,10 @@ public class studentResult {
                 result = "Pass";
             else
                 result = "Fail";
-            System.out.println("Total marks: "+total);
-            System.out.println("Average marks: "+avg);
-            System.out.println("Result: "+result);
+            
+            st.executeUpdate("INSERT INTO RESULT VALUES ("+id+","+m1+","+m2+","+m3+","+total+","+avg+",'"+result+"')");
+            con.close();
+
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -60,16 +66,23 @@ public class studentResult {
     static void display(){
         try{
             connect();
-            System.out.println("Enter the ID of student to display:");
-            int id = Integer.parseInt(sc.nextLine());
-            ResultSet rs =st.executeQuery("SELECT * FROM STUDENT WHERE ID = "+id);
+            
+            ResultSet rs =st.executeQuery("SELECT S.ID,S.NAME,S.BATCH,S.MARKS1,S.MARKS2,S.MARKS3,S.TOTAL,S.AVG,S.RESULT FROM STUDENT S INNER JOIN RESULT R ON S.ID=R.ID");
+            System.out.println("ID \t Name \t Batch \t Marks1 \t Marks2 \t Marks3 \t Total \t Average \t Result");
             if(rs.next()){
                 System.out.println("ID: "+rs.getInt(1));
                 System.out.println("Name: "+rs.getString(2));
                 System.out.println("Batch: "+rs.getString(3));
+                System.out.println("Marks1: "+rs.getInt(4));
+                System.out.println("Marks2: "+rs.getInt(5));
+                System.out.println("Marks3: "+rs.getInt(6));
+                System.out.println("Total: "+rs.getInt(7));
+                System.out.println("Average: "+rs.getDouble(8));
+                System.out.println("Result: "+rs.getString(9));
             }else{
                 System.out.println("Student not found");
             }
+            con.close();
         }catch(SQLException e){
             e.printStackTrace();
         }
