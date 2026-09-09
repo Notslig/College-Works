@@ -1,10 +1,13 @@
-import java.sql.* ;
-import java.util.*;
+import java.sql.Connection ;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Scanner;
 
 public class bank {
     Connection con ;
     Statement st ;
-    st = con.createStatement();
+    
     Scanner sc = new Scanner(System.in);
 
     public void connect(){
@@ -13,6 +16,7 @@ public class bank {
 
             Class.forName("");
             con = DriverManager.getConnection(null);
+            st = con.createStatement();
 
         }catch(Exception e){
 

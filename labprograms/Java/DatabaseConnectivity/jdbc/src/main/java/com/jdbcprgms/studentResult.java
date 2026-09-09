@@ -12,11 +12,12 @@ public class studentResult {
     static Statement st;
     static void connect(){
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con =  DriverManager.getConnection("jdbc:mysql:College-Works/labprograms/Java/DatabaseConnectivity/jdbc/databases/studentResult.db","root","password");
+            Class.forName("org.sqlite.JDBC");
+            con =  DriverManager.getConnection("jdbc:sqlite:studentResult.db");
             con.createStatement().execute("CREATE TABLE IF NOT EXISTS STUDENT (ID INT PRIMARY KEY, NAME VARCHAR(100), BATCH VARCHAR(100))");
             con.createStatement().execute("CREATE TABLE IF NOT EXISTS RESULT (ID INT PRIMARY KEY, MARKS1 INT, MARKS2 INT, MARKS3 INT, TOTAL INT, AVG DOUBLE, RESULT VARCHAR(10), FOREIGN KEY(ID) REFERENCES STUDENT(ID))");
             st = con.createStatement();
+            System.out.println("Connected to database successfully");
             
         }catch(Exception e ){
             e.printStackTrace();
@@ -67,7 +68,7 @@ public class studentResult {
         try{
             connect();
             
-            ResultSet rs =st.executeQuery("SELECT S.ID,S.NAME,S.BATCH,S.MARKS1,S.MARKS2,S.MARKS3,S.TOTAL,S.AVG,S.RESULT FROM STUDENT S INNER JOIN RESULT R ON S.ID=R.ID");
+            ResultSet rs =st.executeQuery("SELECT S.ID,S.NAME,S.BATCH,R.MARKS1,R.MARKS2,R.MARKS3,R.TOTAL,R.AVG,R.RESULT FROM STUDENT S INNER JOIN RESULT R ON S.ID=R.ID");
             System.out.println("ID \t Name \t Batch \t Marks1 \t Marks2 \t Marks3 \t Total \t Average \t Result");
             if(rs.next()){
                 System.out.println("ID: "+rs.getInt(1));
