@@ -1,4 +1,4 @@
-package com.jdbcprgms;
+package com.servletprgms;
 
 import java.io.IOException;
 import java.io.PrintWriter;
