@@ -21,12 +21,10 @@ public class stop_WaitReciever {
         String ex = "exit";
 
         while(message.compareTo(ex)!=0){
-            Thread.sleep(1000);
             message = buffer.readLine();
             if(message.compareTo(ex)==0)
                 break;
             System.out.println("recieved "+message);
-            Thread.sleep(500);
             ps.println("recieved");
         }
         System.out.println("all packets recieved");
